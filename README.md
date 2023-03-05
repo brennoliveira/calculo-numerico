@@ -6,7 +6,7 @@
 
 - Brenno Santos Oliveira
 
-## Métodos implementados:
+## Métodos estudados:
 - Bisseção
 - Falsa Posição
 - Newton
