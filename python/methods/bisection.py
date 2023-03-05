@@ -4,8 +4,9 @@ def bissecao(f, a, b, tol):
     """
     if f(a) * f(b) > 0:
         raise ValueError("A função não muda de sinal no intervalo dado.")
-    
+    i = 0
     while b - a > tol:
+        i += 1
         c = (a + b) / 2
         if f(c) == 0:
             return c
@@ -13,7 +14,7 @@ def bissecao(f, a, b, tol):
             b = c
         else:
             a = c
-    
+    print(f"iterações: {i}")
     return (a + b) / 2
 
 
@@ -21,4 +22,4 @@ def f(x):
   """
   Função a ser analisada.
   """
-  return x**3 - 6*x**2 + 11*x - 6
+  return x**3 - 9*x + 3
