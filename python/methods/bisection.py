@@ -12,6 +12,7 @@ def bissecao(f, a, b, prec):
         i += 1
         c = (a + b) / 2
         if f(c) == 0:
+            print(f"iterações: {i}")
             return c
         elif f(a) * f(c) < 0:
             b = c
