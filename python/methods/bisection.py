@@ -1,6 +1,9 @@
 def bissecao(f, a, b, prec):
     """
-    Encontra a raiz da função f no intervalo [a, b] com precisão prec.
+    f -> função analisada
+    a -> início do intervalo
+    b -> fim do intervalo
+    prec -> precisão
     """
     if f(a) * f(b) > 0:
         raise ValueError("A função não muda de sinal no intervalo dado.")

@@ -1,4 +1,10 @@
 def newton(f, fd, x, prec):
+  """
+  f -> função analizada
+  fd -> derivada da função f
+  x -> ponto inicial
+  prec -> precisão
+  """
   i = 0
   while abs(f(x)) > prec:
     i+= 1

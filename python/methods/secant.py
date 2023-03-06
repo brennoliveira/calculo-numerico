@@ -1,4 +1,9 @@
 def secant(f, x0, x1, prec):
+  """
+  f -> função analisada
+  x0, x1 -> pontos iniciais
+  prec -> precisão
+  """
   i = 0
   fx0 = f(x0)
   fx1 = f(x1)
