@@ -4,21 +4,26 @@ import secant as se
 import falsePosition as fp
 
 prec = 0.001
+f = lambda x: x**3 - 9*x + 3
+fd = lambda x: 2*x**2 - 9
 
-raiz = bi.bissecao(bi.f, 0, 1, prec)
+print("Bisseção")
+raiz = bi.bissecao(f, 0, 1, prec)
 print(raiz)
 
 print("*-"*20)
 
-raiz = ne.newton(ne.f, ne.fd, 0, prec)
+print("Falsa Posição")
+raiz = fp.falsePosition(f, 0, 1, prec)
 print(raiz)
 
 print("*-"*20)
 
-raiz = se.secant(se.f, 0, 1, prec)
+raiz = se.secant(f, 0, 1, prec)
 print(raiz)
 
 print("*-"*20)
 
-raiz = fp.falsePosition(fp.f, 0, 1, prec)
+print("Newton")
+raiz = ne.newton(f, fd, 0, prec)
 print(raiz)
